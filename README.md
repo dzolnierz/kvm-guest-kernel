@@ -14,3 +14,9 @@ Options enabled:
 
  - live patching
  - full network options for router and load balancer
+
+Build under Debian:
+
+ # make-kpkg --append-to-version -4-kvm-amd64 --revision 4.0 \
+ 	--initrd --rootcmd fakeroot --config menuconfig -j 5 \
+	kernel_image modules_image
