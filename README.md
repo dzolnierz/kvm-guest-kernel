@@ -17,4 +17,4 @@ Options enabled:
 
 Build under Debian:
 
- # make-kpkg --append-to-version -4-kvm-amd64 --revision 4.0 --initrd --rootcmd fakeroot --config menuconfig -j 5 kernel_image modules_image
+```make-kpkg --append-to-version -4-kvm-amd64 --revision 4.0 --initrd --rootcmd fakeroot --config menuconfig -j 5 kernel_image modules_image```
