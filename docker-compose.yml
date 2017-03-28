@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  kbuild:
+    build: 
+      context: .
+    container_name: kbuild
+    image: kbuild:latest
+    volumes:
+      - ./build:/usr/src
+    command: ["build"]
+    environment:
+      - LATEST=4.6
