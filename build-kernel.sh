@@ -38,22 +38,22 @@ function build() {
 }
 
 case "${LATEST}" in
-    *rc*)
-        KERNEL_VERSION=${LATEST}
-        URL_PATH=v4.x/testing
-        ;;
-    4.[0-9]*.[0-9]*)
-        KERNEL_VERSION=${LATEST}
-        URL_PATH=v4.x
-        ;;
-    4.[0-9]*)
-        KERNEL_VERSION=${LATEST}.0
-        URL_PATH=v4.x
-        ;;
-    *)
-        echo >&2 "${LATEST} is unsupportd kernel version."
-        exit 4
-        ;;
+	*rc*)
+		KERNEL_VERSION=${LATEST}
+		URL_PATH=v4.x/testing
+		;;
+	4.[0-9]*.[0-9]*)
+		KERNEL_VERSION=${LATEST}
+		URL_PATH=v4.x
+		;;
+	4.[0-9]*)
+		KERNEL_VERSION=${LATEST}.0
+		URL_PATH=v4.x
+		;;
+	*)
+		echo >&2 "${LATEST} is unsupportd kernel version."
+		exit 4
+		;;
 esac
 
 case "${1}" in
