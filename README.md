@@ -26,7 +26,8 @@ PKG_ARCH=amd64
 PKG_REVISION=1.0
 
 test -d build || { mkdir build ; cd $_ }
-curl "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${KERNEL_VERSION}.tar.xz"
+curl "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${KERNEL_VERSION}.tar.xz" \
+	-o "linux-${KERNEL_VERSION}.tar.xz"
 tar -xJf "linux-${KERNEL_VERSION}.tar.xz" -C .
 cd linux-${KERNEL_VERSION}
 cp ../config-${KERNEL_VERSION} .
