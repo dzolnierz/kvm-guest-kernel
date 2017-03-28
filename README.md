@@ -9,8 +9,8 @@ Options enabled:
     * CONFIG_VIRTIO_CONSOLE=m
     * CONFIG_VIRTIO_BLK=y
     * CONFIG_VIRTIO_BALLOON=m
-	* CONFIG_SCSI_VIRTIO=m
-	* CONFIG_HW_RANDOM_VIRTIO=m
+    * CONFIG_SCSI_VIRTIO=m
+    * CONFIG_HW_RANDOM_VIRTIO=m
 
  - live patching
  - full network options for router and load balancer
@@ -18,7 +18,7 @@ Options enabled:
 Build under Debian:
 
 ```
-KERNEL_VERSION=4.6
+KERNEL_VERSION=4.9
 PKG_BUILD=1
 PKG_NAME=kvm
 PKG_ARCH=amd64

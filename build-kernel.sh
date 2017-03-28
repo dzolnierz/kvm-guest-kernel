@@ -51,7 +51,7 @@ case "${LATEST}" in
 		URL_PATH=v4.x
 		;;
 	*)
-		echo >&2 "${LATEST} is unsupportd kernel version."
+		echo >&2 "${LATEST} is unsupported kernel version."
 		exit 4
 		;;
 esac

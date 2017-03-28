@@ -10,4 +10,4 @@ services:
       - ./build:/usr/src
     command: ["build"]
     environment:
-      - LATEST=4.6
+      - LATEST=4.9.18
