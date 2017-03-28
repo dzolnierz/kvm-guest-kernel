@@ -4,6 +4,7 @@ Options enabled:
 
     * CONFIG_VIRTIO=y
     * CONFIG_VIRTIO_PCI=y
+	* CONFIG_VIRTIO_PCI_LEGACY=y
     * CONFIG_VIRTIO_NET=m
     * CONFIG_VIRTIO_MMIO=m
     * CONFIG_VIRTIO_CONSOLE=m
@@ -13,7 +14,7 @@ Options enabled:
     * CONFIG_HW_RANDOM_VIRTIO=m
 
  - live patching
- - full network options for router and load balancer
+ - network options for router and load balancer (IPVS)
 
 Build under Debian:
 
