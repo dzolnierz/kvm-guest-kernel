@@ -18,7 +18,18 @@ Options enabled:
 Build under Debian:
 
 ```
-make-kpkg --append-to-version -$PKG_BUILD-kvm-$(arch) --revision $PKG_REVISION \
-	--initrd --rootcmd fakeroot --config menuconfig -j $(nproc) \
-	kernel_image modules_image
+KERNEL_VERSION=4.6
+PKG_BUILD=1
+PKG_NAME=kvm
+PKG_ARCH=amd64
+PKG_REVISION=1.0
+
+test -d build || { mkdir build ; cd $_ }
+curl "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${KERNEL_VERSION}.tar.xz"
+tar -xJf "linux-${KERNEL_VERSION}.tar.xz" -C .
+cd linux-${KERNEL_VERSION}
+cp ../config-${KERNEL_VERSION} .
+make olddefconfig
+make-kpkg --append-to-version -$PKG_BUILD-$PKG_NAME-$PKG_ARCH --revision $PKG_REVISION \
+	--initrd --rootcmd fakeroot --jobs $(nproc) kernel_image modules_image
 ```
